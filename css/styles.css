@@ -1,0 +1,305 @@
+/* CSS DEL EJEMPLO PROFE*/
+
+body {
+   background-image: radial-gradient(red, yellow, green);
+}
+
+h1 {
+   text-align: center;
+}
+h2 {
+   text-align: center;
+}
+a {
+   text-decoration: none;
+   color: white;
+}
+
+ul {
+   list-style: none;
+}
+
+img {
+   max-width: 100%;
+}
+
+/* DESKTOP FIRST */
+/* LA GRILLA PRINCIPAL */
+
+#grilla-profe {
+   display: grid;
+   grid-template-areas:
+   "cabecera cabecera cabecera"
+   "productos productos productos"
+   "banner banner banner"
+   "footer footer footer";
+
+   grid-template-columns: repeat(3, 1fr);
+}
+
+/*HEADER O CABECERA*/
+#header-profe {
+   grid-area: cabecera;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+   #header-profe {
+      flex-direction: column;
+   }
+}
+
+.logo {
+   height: 8rem;
+}
+
+#navegacion-profe {
+   display: flex;
+   gap: .8rem;
+}
+
+@media screen and (max-width: 399px) {
+   #navegacion-profe {
+      flex-direction: column;
+   }
+}
+
+#navegacion-profe li {
+   background-color: blue;
+   padding: .3rem 1rem;
+   /*La transition se declara sobre el elemento sin hover*/
+   transition: all .5s;
+  }
+
+  #navegacion-profe li.activa {
+   background-color: green;
+  }
+
+  #navegacion-profe li:hover {
+   background-color: green;
+  }
+
+/*PRODUCTOS*/
+#productos-profe {
+   grid-area: productos;
+}
+
+#productos-profe h2,
+#productos-profe p {
+   text-align: center;
+}
+
+.padre-cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   row-gap: 2rem;
+   justify-items: center;
+}
+
+@media screen and (max-width: 992px) {
+   .padre-cards {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .padre-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+.card-profe {
+   width: 16rem;
+   border: solid 2px gray;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 1rem;
+}
+
+.card-profe img {
+   height: 12rem;
+}
+/*BANNER*/
+#banner-profe {
+   grid-area: banner;
+   background-color: #eaeaea;
+   margin-top: 4rem;
+   padding: 2rem;
+}
+
+#banner-profe h2 {
+   text-align: center;
+}
+
+/* .padre-banners {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   justify-items: center;
+}
+
+@media screen and (max-width: 992px) {
+   .padre-banners {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .padre-banners {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+} */
+
+.banners-caracteristicas {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+/*FOOTER */
+#footer {
+   grid-area: footer;
+}
+
+/*CODIGO DE LAS TRANSFORMACIONES*/
+.caja-negra {
+   height: 200px;
+   width: 200px;
+   background-color: black;
+   /*translate recibe 2 valores*/
+   /* transform: translate(60px, 30px); */
+
+   /*translateX solo mueve en el eje X*/
+   /*translateY solo mueve en el eje Y*/
+
+   /*Scale solo, toma 2 valor, el primero es el ancho, el segundo el alto*/
+   /* transform: scale(2,1); */
+   /* transform: scaleX(2); */
+   /* transform: scaleY(2); */
+
+   /* transform: skew(30deg, 30deg); */
+   transition: height 2s, width 6s;
+}
+
+.caja-negra p {
+   color: white;
+}
+
+.caja-azul {
+   width: 100px;
+   height: 100px;
+   background-color: blue;
+   animation-name: un_efecto;
+   animation-iteration-count: infinite;
+   animation-timing-function: all;
+   animation-duration: 2s;
+   animation-delay: 2s;
+}
+
+@keyframes un_efecto {
+   0%{ 
+      width: 100px; 
+   }
+   
+   10%{ 
+      width: 50px; 
+   }
+   
+   25%{ 
+      width: 300px; 
+   }
+   
+   50%{ 
+      width: 200px;
+      background-color: red; 
+   }
+   
+   75%{ 
+      width: 300px;
+   }
+
+   100%{ 
+      width: 100px;
+      background-color:green;
+   }
+}
+
+
+.caja-negra:hover {
+   height: 400px;
+   width: 400px;
+}
+
+/*FORMULARIO*/
+#formulario {
+   margin-top: 40px;
+}
+
+form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+
+input:focus {
+   transform: scale(1.5, 1.5);
+   outline: none;
+}
+
+/*ANIMACION CON KEYFRAMES*/
+.barra-progreso {
+   margin-top: 30px;
+   width: 100%;
+   border: solid 1px;
+   height: 7px;
+}
+
+.barra-completando {
+   border: solid 1px;
+   height: 6px;
+   width: 30%;
+   background-color: red;
+
+   /*Indicar que la animacion funcione*/
+   animation: cargando 1s infinite;
+}
+
+/* El identifier de las keyframes es el nombre */
+@keyframes cargando {
+   0% {
+      width: 0;
+   }
+
+   100% {
+      width: 30%;
+   }
+}
+
+
+@keyframes aparecer {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+}
+
+/* MODIFICANDO ESTILOS DE BOOTSTRAP */
+.color-nav {
+   background-color: red;
+}
+
+#carouselExampleIndicators {
+   width: 50%;
+   margin: 0 auto;
+}
