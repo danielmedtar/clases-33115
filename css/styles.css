@@ -1,7 +1,8 @@
 /* CSS DEL EJEMPLO PROFE*/
 
 body {
-   background-image: radial-gradient(red, yellow, green);
+   background-color: #393839;
+   color: #fff;
 }
 
 h1 {
@@ -303,3 +304,92 @@ input:focus {
    width: 50%;
    margin: 0 auto;
 }
+
+/* SECCION DE HISTORIA */
+.contenedores-historia {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+}
+
+@media screen and (min-width: 992px) {
+   .contenedores-historia {
+      flex-direction: row;
+   }
+}
+
+.contenedores-historia img {
+   height: 200px;
+}
+
+h3 {
+   text-align: center;
+}
+
+.contenedor-opciones {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.contenedor-labels {
+   display: flex;
+   gap: 30px;
+}
+
+.boton-historia {
+   background-color: yellow;
+   color: #393839;
+   font-weight: bold;
+   padding: 5px 15px;
+}
+
+.contenedor-labels label {
+   background-color: gray;
+   color: white;
+   font-weight: bold;
+   padding: 5px 15px;
+   cursor: pointer;
+}
+
+.contenedor-botones a {
+   display: none;
+}
+
+#sitio-web,
+#whatsapp {
+   display: none;
+}
+
+#sitio-web:checked ~ .contenedor-botones .boton-web {
+   display: block;
+}
+
+#whatsapp:checked ~ .contenedor-botones .boton-whatsapp {
+   display: block;
+}
+
+.contenedores-historia:nth-of-type(2n) {
+   background-color: yellow;
+   color: #393839;
+}
+
+.contenedores-historia:not(:last-of-type) {
+   margin-bottom: 60px;
+}
+
+.nav-item:first-of-type {
+   background-color: aqua;
+   color: #393839;
+}
+
+/* .nav-item:last-of-type {
+   background-color: aqua;
+   color: #393839;
+} */
+
+/* .nav-item:nth-of-type(2) {
+   background-color: aqua;
+   color: #393839;
+} */
