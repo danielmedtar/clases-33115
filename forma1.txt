@@ -1,0 +1,46 @@
+1era forma: El paso a paso tambien esta en las diapositivas de la clase.
+
+Para aplicar en sus proyectos, solo crear carpeta scss y dentro su archivo.
+
+Paso 1: npm init
+
+Paso 2: npm install -D node-sass nodemon
+
+Paso 3: En el archivo package.json agregar despues de la línea test de scripts lo siguiente:
+
+"build-css": "node-sass --include-path scss scss/prueba.scss css/pruebacss.css",
+"watch-css": "nodemon -e scss -x \"npm run build-css\"" 
+
+Cambiar donde dice prueba por los nombres de sus archivos. 
+
+Quedaría asi:
+
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/styles.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20"
+  }
+}
+
+Paso 4: crear archivo .gitignore y dentro escribir node_modules/
+
+Paso 5: PARA ARRANCAR SASS: npm run-watch css
+
+Paso 6: al terminar de trabajar con SASS hacer clic en la linea de la consola como si fueran a escribir y allí presionar ctrl + c (windows) o command + c (MAC). Esto detiene la consola y no la deja esperando permanentemente.
+
+Paso 7: para arrancar a trabajar de nuevo con SASS solo escribir npm run-watch css
+
+LOS PASOS DEL 1 AL 4 SOLO SE HACEN LA PRIMERA VEZ. LUEGO SOLO ARRANCAN A TRABAJAR CON EL COMANDO DEL PASO 5.
+
+

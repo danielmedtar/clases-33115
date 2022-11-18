@@ -1,0 +1,46 @@
+@import "variables";
+@import "home";
+@import "page2";
+@import "page3";
+
+ 
+.barra-completando {
+   border: solid 1px;
+   height: 6px;
+   width: 30%;
+   background-color: red;
+
+   /*Indicar que la animacion funcione*/
+   animation: cargando 1s infinite;
+}
+
+/* El identifier de las keyframes es el nombre */
+@keyframes cargando {
+   0% {
+      width: 0;
+   }
+
+   100% {
+      width: 30%;
+   }
+}
+
+
+@keyframes aparecer {
+   0% {
+     opacity: 0;
+   }
+   100% {
+     opacity: 1;
+   }
+}
+
+/* MODIFICANDO ESTILOS DE BOOTSTRAP */
+.color-nav {
+   background-color: red;
+}
+
+#carouselExampleIndicators {
+   width: 50%;
+   margin: 0 auto;
+}

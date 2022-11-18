@@ -1,0 +1,9 @@
+2da forma: Para aplicar en sus proyectos, solo crear carpeta scss y dentro su archivo.
+
+1er paso: npm init
+2do paso: npm install -g sass
+3er paso: sass --watch scss:css
+
+4to paso: al terminar de trabajar con SASS hacer clic en la linea de la consola como si fueran a escribir y allí presionar ctrl + c (windows) o command + c (MAC). Esto detiene la consola y no la deja esperando permanentemente.
+
+LOS PASOS 1 Y 2 SOLO SE HACEN LA PRIMERA VEZ. LUEGO SOLO ARRANCAN A TRABAJAR CON EL COMANDO DEL PASO 3.
