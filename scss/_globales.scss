@@ -1,0 +1,115 @@
+/*body {
+    background-color: $bg-body;
+    font-style: $fuente-titulos;
+    color: $letra-clara;
+}*/
+
+body {
+    @if $fiesta == pascuas {
+        background-color: pink;
+        color: #000;
+    } @else if $fiesta == padre {
+        background-color: blue;
+        color: $letra-clara;
+    } @else if $fiesta == navidad {
+        background-color: red;
+        color: blue;
+    } @else {
+        background-color: $bg-body;
+        font-style: $fuente-titulos;
+        color: $letra-clara;
+    }
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo {
+    height: 8rem;
+}
+
+.nav-item {
+    background-color: red;
+ 
+    /*ampersand*/
+    & a:hover {
+       background-color: blue;
+       color: $letra-clara;
+    }
+ }
+
+ .color-nav {
+    background-color: red;
+ }
+
+ /*EXTENDS*/
+ .botones-generales {
+    font-weight: bold;
+    padding: 5px 15px;
+    cursor: pointer;
+ }
+
+ /*BUCLES*/
+ @for $i from 1 through 10 {
+	.titulo-#{$i}{
+	    font-size: $fuente-chica * $i;
+	}
+}
+
+
+/*EACH*/
+@each $color in blue, yellow, black {
+	.#{$color}{
+	    color: #{$color};
+        background-color: #{$color};
+	}
+}
+
+/*MAPA*/
+$redesSociales: ( /*Declaramos nuestro mapa*/
+    twitter: #55acee,
+    facebook:  #3a5795,
+    send-mail: #C25E30
+); 
+
+/*Creamos el bucle para usar los valores del mapa*/
+@each $redSocial, $color in $redesSociales {
+    .btn--#{$redSocial} {
+        background-color: $color;
+    }
+ }
+
+ /*MAP GET*/
+
+ $estilos: (
+    color: #3673D9,
+    centro: center,
+    tFuente: 35px,
+    chico: 1rem
+);
+
+.clase-inventada {
+    @include flex-column-centrado;
+    background-color: map-get($estilos, color);
+    font-size: map-get($estilos, tFuente);
+}
+
+
+
+
+
+ 
+

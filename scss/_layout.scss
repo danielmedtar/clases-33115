@@ -1,0 +1,49 @@
+/*LAYOUT*/
+/* DESKTOP FIRST */
+/* LA GRILLA PRINCIPAL */
+#grilla-profe {
+    display: grid;
+    grid-template-areas:
+    "cabecera cabecera cabecera"
+    "productos productos productos"
+    "banner banner banner"
+    "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+ }
+
+ /*HEADER O CABECERA*/
+#header-profe {
+    grid-area: cabecera;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 4rem;
+ }
+
+ @media screen and (max-width: 767px) {
+    #header-profe {
+       flex-direction: column;
+    }
+ }
+
+ /*PRODUCTOS*/
+#productos-profe {
+    grid-area: productos;
+ }
+
+ /*BANNER*/
+ /* OPERACIONES */
+ /*Para sumar y restar usar el rem en el valor, por ejemplo calc($separacion + 2rem);*/
+ /*Para dividir y multiplicar no necesita el rem*/
+#banner-profe {
+    grid-area: banner;
+    background-color: #eaeaea;
+    color: #000;
+    margin-top: calc($separacion * 5);
+    padding: 2rem;
+ }
+
+ /*FOOTER */
+#footer {
+    grid-area: footer;
+ }

@@ -1,0 +1,44 @@
+/*HOME*/
+.padre-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2rem;
+    justify-items: center;
+ }
+
+ @media screen and (max-width: 992px) {
+    .padre-cards {
+       grid-template-columns: repeat(2, 1fr);
+    }
+ }
+
+ @media screen and (max-width: 767px) {
+    .padre-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ }
+ 
+ .card-profe {
+    width: 16rem;
+    border: solid 2px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+ }
+ .card-profe img {
+    height: 12rem;
+ }
+
+ /*BANNER*/
+ #banner-profe h2 {
+    text-align: center;
+ }
+
+ .banners-caracteristicas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }

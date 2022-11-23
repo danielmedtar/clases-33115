@@ -1,6 +1,262 @@
 @charset "UTF-8";
 /*Variable para colores y fuentes*/
 /*Tamaños de las media queries*/
+/*Separacion*/
+/* Variable para promociones */
+/*MIXIN*/
+/*MIXIN CON PARÁMETROS*/
+/*body {
+    background-color: $bg-body;
+    font-style: $fuente-titulos;
+    color: $letra-clara;
+}*/
+body {
+  background-color: #393839;
+  font-style: "Roboto", sans-serif;
+  color: #fff;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.logo {
+  height: 8rem;
+}
+
+.nav-item {
+  background-color: red;
+  /*ampersand*/
+}
+.nav-item a:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+.color-nav {
+  background-color: red;
+}
+
+/*EXTENDS*/
+.botones-generales, .contenedor-labels label, .boton-historia {
+  font-weight: bold;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+/*BUCLES*/
+.titulo-1 {
+  font-size: 1rem;
+}
+
+.titulo-2 {
+  font-size: 2rem;
+}
+
+.titulo-3 {
+  font-size: 3rem;
+}
+
+.titulo-4 {
+  font-size: 4rem;
+}
+
+.titulo-5 {
+  font-size: 5rem;
+}
+
+.titulo-6 {
+  font-size: 6rem;
+}
+
+.titulo-7 {
+  font-size: 7rem;
+}
+
+.titulo-8 {
+  font-size: 8rem;
+}
+
+.titulo-9 {
+  font-size: 9rem;
+}
+
+.titulo-10 {
+  font-size: 10rem;
+}
+
+/*EACH*/
+.blue {
+  color: blue;
+  background-color: blue;
+}
+
+.yellow {
+  color: yellow;
+  background-color: yellow;
+}
+
+.black {
+  color: black;
+  background-color: black;
+}
+
+/*MAPA*/
+/*Creamos el bucle para usar los valores del mapa*/
+.btn--twitter {
+  background-color: #55acee;
+}
+
+.btn--facebook {
+  background-color: #3a5795;
+}
+
+.btn--send-mail {
+  background-color: #C25E30;
+}
+
+/*MAP GET*/
+.clase-inventada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3673D9;
+  font-size: 35px;
+}
+
+/*LAYOUT*/
+/* DESKTOP FIRST */
+/* LA GRILLA PRINCIPAL */
+#grilla-profe {
+  display: grid;
+  grid-template-areas: "cabecera cabecera cabecera" "productos productos productos" "banner banner banner" "footer footer footer";
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/*HEADER O CABECERA*/
+#header-profe {
+  grid-area: cabecera;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  #header-profe {
+    flex-direction: column;
+  }
+}
+/*PRODUCTOS*/
+#productos-profe {
+  grid-area: productos;
+}
+
+/*BANNER*/
+/* OPERACIONES */
+/*Para sumar y restar usar el rem en el valor, por ejemplo calc($separacion + 2rem);*/
+/*Para dividir y multiplicar no necesita el rem*/
+#banner-profe {
+  grid-area: banner;
+  background-color: #eaeaea;
+  color: #000;
+  margin-top: 50rem;
+  padding: 2rem;
+}
+
+/*FOOTER */
+#footer {
+  grid-area: footer;
+}
+
+/*HOME*/
+.padre-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 2rem;
+  justify-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .padre-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 767px) {
+  .padre-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.card-profe {
+  width: 16rem;
+  border: solid 2px gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card-profe img {
+  height: 12rem;
+}
+
+/*BANNER*/
+#banner-profe h2 {
+  text-align: center;
+}
+
+.banners-caracteristicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barra-completando {
+  border: solid 1px;
+  width: 1200px;
+  height: 10px;
+  background-color: red;
+  /*Indicar que la animacion funcione*/
+  animation: cargando 1s infinite;
+}
+
+/* El identifier de las keyframes es el nombre */
+@keyframes cargando {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* MODIFICANDO ESTILOS DE BOOTSTRAP */
+#carouselExampleIndicators {
+  width: 50%;
+  margin: 0 auto;
+}
+
 /* SECCION DE HISTORIA */
 .contenedores-historia {
   display: flex;
@@ -12,7 +268,7 @@
   height: 200px;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 992px) {
   .contenedores-historia {
     flex-direction: row;
   }
@@ -36,16 +292,11 @@ h3 {
 .boton-historia {
   background-color: yellow;
   color: #393839;
-  font-weight: bold;
-  padding: 5px 15px;
 }
 
 .contenedor-labels label {
   background-color: gray;
   color: white;
-  font-weight: bold;
-  padding: 5px 15px;
-  cursor: pointer;
 }
 
 .contenedor-botones a {
@@ -89,42 +340,6 @@ h3 {
 } */
 .sass {
   color: red;
-}
-
-.barra-completando {
-  border: solid 1px;
-  height: 6px;
-  width: 30%;
-  background-color: red;
-  /*Indicar que la animacion funcione*/
-  animation: cargando 1s infinite;
-}
-
-/* El identifier de las keyframes es el nombre */
-@keyframes cargando {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 30%;
-  }
-}
-@keyframes aparecer {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/* MODIFICANDO ESTILOS DE BOOTSTRAP */
-.color-nav {
-  background-color: red;
-}
-
-#carouselExampleIndicators {
-  width: 50%;
-  margin: 0 auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -2,13 +2,34 @@
 $bg-body: #393839;
 $fuente-grande: 2rem;
 $fuente-chica: 1rem;
+$letra-clara: #fff;
 
 $fuente-titulos: 'Roboto', sans-serif;
 
 /*Tamaños de las media queries*/
 $pantalla-mediana: 768px;
-$pantalla-grande: 800px;
-$pantalla-xg: 1200px
+$pantalla-grande: 992px;
+$pantalla-xg: 1200px;
+
+/*Separacion*/
+$separacion: 10rem;
+
+/* Variable para promociones */
+$fiesta: ninguna;
+
+/*MIXIN*/
+@mixin flex-column-centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*MIXIN CON PARÁMETROS*/
+@mixin sizes($ancho, $alto) {
+    width: $ancho;   
+    height: $alto;
+ }
+ 
 
 
 

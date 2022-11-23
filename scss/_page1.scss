@@ -1,0 +1,37 @@
+.barra-completando {
+    border: solid 1px;
+    @include sizes(1200px, 10px);
+    background-color: red;
+ 
+    /*Indicar que la animacion funcione*/
+    animation: cargando 1s infinite;
+ }
+ 
+ /* El identifier de las keyframes es el nombre */
+ @keyframes cargando {
+    0% {
+       width: 0;
+    }
+ 
+    100% {
+       width: 30%;
+    }
+ }
+ 
+ 
+ @keyframes aparecer {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+ }
+ 
+ /* MODIFICANDO ESTILOS DE BOOTSTRAP */
+ 
+ 
+ #carouselExampleIndicators {
+    width: 50%;
+    margin: 0 auto;
+ }
