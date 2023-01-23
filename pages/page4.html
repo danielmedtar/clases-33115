@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linkeando bootstrap con CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h1>Filtro de productos</h1>
+
+        <div class="filtro">
+            <input type="radio" name="seleccionado" id="remeras">
+            <input type="radio" name="seleccionado" id="pc">
+            <input type="radio" name="seleccionado" id="todos" checked>
+            
+            <div class="container-opciones my-5">
+                <!-- Remeras -->
+                <label for="remeras">
+                    Remeras
+                </label>
+
+                <label for="pc">
+                    Computadoras
+                </label>
+
+                <label for="todos">
+                    Ver todos
+                </label>
+            </div>
+
+            <div class="contenedor-cards">
+                <div class="card card-remeras" style="width: 18rem;">
+                    <img src="../img/remera3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Card title</h5>
+                        <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card card-remeras" style="width: 18rem;">
+                    <img src="../img/remera2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Card title</h5>
+                        <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card card-pc" style="width: 18rem;">
+                    <img src="../img/pc1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Card title</h5>
+                        <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+                <div class="card card-pc" style="width: 18rem;">
+                    <img src="../img/pc2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-black">Card title</h5>
+                        <p class="card-text text-black">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

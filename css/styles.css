@@ -342,4 +342,58 @@ h3 {
   color: red;
 }
 
+
+/*FILTROS*/
+
+#remeras,
+#pc,
+#todos {
+  display: none;
+}
+
+.container-opciones {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.container-opciones label {
+  cursor: pointer;
+}
+
+.container-opciones label:nth-of-type(even) {
+  background-color: #3673D9;
+}
+.contenedor-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .contenedor-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.card-remeras,
+.card-pc {
+  display: none;
+}
+
+#todos:checked ~ .contenedor-cards .card-remeras,
+#todos:checked ~ .contenedor-cards .card-pc {
+  display: flex;
+  
+}
+
+#remeras:checked ~ .contenedor-cards .card-remeras {
+  display: flex;
+}
+
+#pc:checked ~ .contenedor-cards .card-pc {
+  display: flex;
+}
 /*# sourceMappingURL=styles.css.map */
